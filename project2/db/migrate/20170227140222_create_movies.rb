@@ -6,7 +6,7 @@ class CreateMovies < ActiveRecord::Migration[5.0]
       t.text :summary
       t.string :written_by
       t.string :poster_url
-      t.datetime :release_date
+      t.string :release_date
 
       t.timestamps
     end

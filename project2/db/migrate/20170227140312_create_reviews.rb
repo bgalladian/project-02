@@ -4,7 +4,8 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.string :author
       t.text :content
       t.integer :rating
-      
+      t.references :movie, null: false, index:true
+
       t.timestamps
 
     end

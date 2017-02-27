@@ -1,0 +1,7 @@
+<h2> Movies Currently Reviewed</h2>
+<a href = "/movies/new"> Add Movie for Review </a>
+
+<% @movies.each do |movie| %>
+<h2><%= link_to movie.title, movie %></h2>
+<img src="<%= movie.poster_url %>">
+<% end %>
