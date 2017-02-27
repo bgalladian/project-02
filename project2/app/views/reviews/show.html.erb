@@ -1,5 +1,14 @@
-<h2><%= @review.author %></h2>
+<h2>Critic: <%= @review.author %> on <%= @review.created_at%></h2>
+
 <h2>Rating: <%= @review.rating %></h2>
 
 <h2><%= @review.content %></h2>
-<%= link_to "Edit Review", edit_movie_review_path %>
+<p><%= link_to "Edit Review", edit_movie_review_path %> | <%=link_to "Delete Review", movie_review_path(@movie, @review), method: :delete%></p>
+<br>
+<h3>Comments<%=link_to "(+)", new_movie_review_comment_path(@movie, @review)%></h3>
+
+
+<%= @review.comments.each do |comment| %>
+<p><%= comment.comments %>, <%= comment.author %>  <%=link_to "Edit", edit_movie_review_comment_path(@movie, @review, comment)%></p>
+
+<% end %>

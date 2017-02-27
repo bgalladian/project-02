@@ -1,0 +1,13 @@
+<h2>Edit</h2>
+<%= form_for [@movie, @review, @comment]  do |f| %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+
+  <%= f.label :comments %>
+  <%= f.text_field :comments %>
+
+  <%= f.submit "Edit Comment"%>
+  <% end %>
+
+  <h2> <%= link_to "Delete Comment", movie_review_comment_path(@movie, @review), method: :delete%></h2>

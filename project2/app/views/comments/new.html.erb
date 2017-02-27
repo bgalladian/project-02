@@ -1,0 +1,11 @@
+<h2>New Review</h2>
+<%= form_for [@movie, @review, @comment]  do |f| %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+
+  <%= f.label :comments %>
+  <%= f.text_field :comments %>
+
+  <%= f.submit "Submit Comment"%>
+  <% end %>

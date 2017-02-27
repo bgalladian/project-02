@@ -1,5 +1,5 @@
 <h2>New Review</h2>
-<%= form_for [@movie, @movie.reviews.build]  do |f| %>
+<%= form_for [@movie, @review]  do |f| %>
 
   <%= f.label :author %>
   <%= f.text_field :author %>
