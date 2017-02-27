@@ -1,9 +1,16 @@
 <h1> <%= @movie.title %></h1>
 <h2>Release Date: <%= @movie.release_date %> | Director: <%=@movie.director %> | Writer: <%=@movie.written_by %> </h2>
   <img src="<%= @movie.poster_url %>">
-<h2> <%= @movie.summary %> </h2>
+
 <h2> <%= link_to "Edit Movie Information", edit_movie_path(@movie)%>
 
 <%= form_for @movie, url: "/movies/#{@movie.id}", method: :delete do |f| %>
 <% f.submit "Remove Movie From Review List", class: "btn-delete"%>
+<% end %>
+
+<h2> <%= @movie.summary %> </h2>
+
+<h1>Submitted Reviews<%=link_to "(+)", new_movie_review_path(@movie)%></h2>
+<% @movie.reviews.each do |review| %>
+<h2><%= link_to review.author, movie_review_path(@movie, review)%></h2>
 <% end %>
