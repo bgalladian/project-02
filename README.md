@@ -4,7 +4,7 @@ Repository for my second project.
 #Description
 A movie review site where users can share their opinions on their favorite films. The site should perform the following actions at these levels:
 
-1. MVP
+MVP
 - Load the site
 - Display movies that have been reviewed
 - Display descriptions and poster of movie
@@ -14,11 +14,11 @@ A movie review site where users can share their opinions on their favorite films
 - Comment on reviews
 - Edit comments on reviews
 
-2. Silver
+Silver
 - User authentication
 - Upvote or downvote reviews
 
-3. Gold
+Gold
 - Reorder site based on number of votes.
 
 #Technology
