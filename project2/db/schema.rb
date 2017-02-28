@@ -18,14 +18,12 @@ ActiveRecord::Schema.define(version: 20170228164155) do
   create_table "comments", force: :cascade do |t|
     t.string   "author"
     t.text     "comments"
-    t.integer  "review_id",                null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "{:foreign_key=>:true}_id"
+    t.integer  "review_id",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.index ["review_id"], name: "index_comments_on_review_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
-    t.index ["{:foreign_key=>:true}_id"], name: "index_comments_on_{:foreign_key=>:true}_id", using: :btree
   end
 
   create_table "movies", force: :cascade do |t|
@@ -44,15 +42,14 @@ ActiveRecord::Schema.define(version: 20170228164155) do
   create_table "reviews", force: :cascade do |t|
     t.string   "author"
     t.text     "content"
-    t.integer  "rating"
-    t.integer  "movie_id",                 null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "{:foreign_key=>:true}_id"
+    t.string   "rating"
+    t.string   "spoilers"
+    t.integer  "movie_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.index ["movie_id"], name: "index_reviews_on_movie_id", using: :btree
     t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
-    t.index ["{:foreign_key=>:true}_id"], name: "index_reviews_on_{:foreign_key=>:true}_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

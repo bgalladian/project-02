@@ -16,13 +16,10 @@
 nav {
   font-family: 'Fontdiner Swanky', cursive;
   font-size: 24px;
+  overflow: hidden;
+  background-color: rgba(125,125,125,0.8);
 }
 
-nav img{
-  height: 50px;
-  width: 50px;
-  padding-right: 2%;
-}
 .nav-user{
   float: right;
   font-size: 16px;
@@ -33,10 +30,14 @@ hr {
 }
 
  body{
-   background-color: darkred;
+   background-image: url("http://filmrise.com/wp-content/uploads/2014/03/interior.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
    font-size: 12px;
    color: white;
    font-family: 'Lato', sans-serif;
+   margin: 0;
+   padding: 0;
  }
 
 .front-page{
@@ -102,4 +103,23 @@ a:hover:after {
 label{
   margin-right: 10px;
   display: block
+}
+
+form {
+  margin: auto;
+  display: block;
+  align-items: center;
+  text-align: center;
+  border-radius: 10%;
+  background-color: rgba(125,125,125,0.8);
+  width: 600px;
+}
+
+.edit-review, .new-comment, .new-review, .show-page, .front-page, .review {
+  padding: 20px;
+
+}
+
+.review {
+  background-color: rgba(125,125,125,0.8);
 }

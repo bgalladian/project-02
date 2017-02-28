@@ -1,4 +1,5 @@
-<h2>New Review</h2>
+<div class = "new-comment">
+<h2>New Comment</h2>
 <%= form_for [@movie, @review, @comment]  do |f| %>
 
   <%= f.label :author %>
@@ -10,3 +11,4 @@
 <br>
   <%= f.submit "Submit Comment"%>
   <% end %>
+</div>

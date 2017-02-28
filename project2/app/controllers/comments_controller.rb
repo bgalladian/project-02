@@ -21,6 +21,7 @@ before_action :authenticate_user!, except: [:index, :show]
     @comment = Comment.find(params[:id])
   end
 
+
   def update
     @movie = Movie.find(params[:movie_id])
     @review = Review.find(params[:review_id])

@@ -1,14 +1,16 @@
+<div class = "edit-review">
 <h2>Edit: </h2>
 <%= form_for [@movie, @review]  do |f| %>
 
   <%= f.label :author %>
   <%= f.text_field :author %>
 
-  <%= f.label :rating %>
-  <%= f.text_field :rating %>
+  <%= f.label :Was_it_worth_it?  %>
+  <%= f.select :rating, [["Waste  of my money!"], ["Totally up to you!"], ["Totally worth it!"]] %>
 <br>
   <%= f.label :review %>
-  <%= f.text_area :content %>
+  <%= f.text_area :content, :cols => "80", :rows => "30" %>
 <br>
   <%= f.submit "Update"%>
   <% end %>
+</div>
