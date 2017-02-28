@@ -16,15 +16,16 @@
 nav {
   font-family: 'Fontdiner Swanky', cursive;
   font-size: 24px;
-  background-color: gold;
-  color: darkred;
 }
 
 nav img{
   height: 50px;
   width: 50px;
   padding-right: 2%;
-
+}
+.nav-user{
+  float: right;
+  font-size: 16px;
 }
 
 hr {
@@ -91,7 +92,7 @@ a:after {
   width: 0%;
   border-bottom: 3px solid gold;
   transition: 1s;
-  
+
 }
 
 a:hover:after {

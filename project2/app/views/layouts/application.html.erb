@@ -9,13 +9,22 @@
     <link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <nav>
-      <%= link_to image_tag("wiwi-red.png"), "/movies" %>Was It Worth it?
-    <!-- <h1><img src="images/WiWi.png"><a href= "/movies">Was It Worth It?</a></h1> -->
-
+      <%= link_to image_tag("WiWi.png"), "/movies" %>Was It Worth it?
+        <div class = "nav-user">
+        <% if !current_user %>
+    <%= link_to "Sign in", new_user_session_path %> |
+    <%= link_to "Sign up", new_user_registration_path %>
+  <% else %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      <%= current_user.email %>
+  <% end %>
+</div>
   </nav>
   </head>
 
     <body>
+
+
 
 
 
