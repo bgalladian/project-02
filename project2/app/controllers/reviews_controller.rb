@@ -30,7 +30,7 @@ class ReviewsController < ApplicationController
     @movie = Movie.find(params[:movie_id])
     @review = Review.find(params[:id])
     @review.update(review_params)
-    redirect_to movie_reviews_path(@movie)
+    redirect_to movie_review_path(@movie)
   end
 
   def destroy

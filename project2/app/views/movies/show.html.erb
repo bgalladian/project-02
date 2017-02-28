@@ -1,16 +1,17 @@
-<br>
-<h2> <%= @movie.title %></h2>
-<h2>Release Date: <%= @movie.release_date %> | Director: <%=@movie.director %> | Writer: <%=@movie.written_by %> </h2>
+<div class = "show-page">
+<h1> <%= @movie.title %></h1>
+<p>Release Date: <%= @movie.release_date %> <font color ="gold">|</font> Director: <%=@movie.director %> <font color ="gold">|</font> Writer: <%=@movie.written_by %> </p>
   <img src="<%= @movie.poster_url %>">
+<br>
+<h2> <%= link_to "Edit Movie Information", edit_movie_path(@movie)%> | <%= link_to "Delete Movie", movie_path, method: :delete%></h2>
 
-<h2> <%= link_to "Edit Movie Information", edit_movie_path(@movie)%> | <%= link_to "Delete Movie", movies_path, method: :delete%></h2>
 
 
-
-<h2> <%= @movie.summary %> </h2>
+<p> <%= @movie.summary %> </p>
 <br>
 
-<h1>Critic Reviews<%=link_to "(+)", new_movie_review_path(@movie)%>:</h2>
+<h2>Critic Reviews<%=link_to "(+)", new_movie_review_path(@movie)%>:</h2>
 <% @movie.reviews.each do |review| %></p>
-<h2><%= link_to review.author, movie_review_path(@movie, review)%></h2>
+<h3><%= link_to review.author, movie_review_path(@movie, review)%></h3>
 <% end %>
+</div>

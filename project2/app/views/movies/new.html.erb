@@ -8,9 +8,6 @@
   <%= f.label :director %>
   <%= f.text_field :director %>
 <br>
-  <%= f.label :summary %>
-  <%= f.text_area :summary %>
-<br>
   <%= f.label :written_by %>
   <%= f.text_field :written_by %>
 <br>
@@ -20,6 +17,8 @@
   <%= f.label :release_Date %>
   <%= f.text_field :release_date %>
 <br>
+  <%= f.label :summary %>
+  <%= f.text_area :summary, :cols => "50", :rows => "20"  %>
   <%= f.submit "Add Movie" %>
 
   <% end %>

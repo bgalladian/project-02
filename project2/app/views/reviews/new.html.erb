@@ -4,13 +4,13 @@
   <%= f.label :author %>
   <%= f.text_field :author %>
 
-  <%= f.label :rating %>
+  <%= f.label :rating  %>
   <%= f.text_field :rating %>
   <br>
 
   <%= f.label :review %>
-  <%= f.text_area :content %>
-
-
+  <%= f.text_area :content, :cols => "50", :rows => "20" %>
+  <br>
+  <br>
   <%= f.submit "Submit Review"%>
   <% end %>
