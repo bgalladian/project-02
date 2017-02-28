@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228143102) do
+ActiveRecord::Schema.define(version: 20170228164155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,14 @@ ActiveRecord::Schema.define(version: 20170228143102) do
   create_table "comments", force: :cascade do |t|
     t.string   "author"
     t.text     "comments"
-    t.integer  "review_id",  null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "review_id",                null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "{:foreign_key=>:true}_id"
+    t.integer  "user_id"
     t.index ["review_id"], name: "index_comments_on_review_id", using: :btree
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+    t.index ["{:foreign_key=>:true}_id"], name: "index_comments_on_{:foreign_key=>:true}_id", using: :btree
   end
 
   create_table "movies", force: :cascade do |t|
@@ -33,16 +37,22 @@ ActiveRecord::Schema.define(version: 20170228143102) do
     t.string   "release_date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_movies_on_user_id", using: :btree
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string   "author"
     t.text     "content"
     t.integer  "rating"
-    t.integer  "movie_id",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "movie_id",                 null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "{:foreign_key=>:true}_id"
+    t.integer  "user_id"
     t.index ["movie_id"], name: "index_reviews_on_movie_id", using: :btree
+    t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
+    t.index ["{:foreign_key=>:true}_id"], name: "index_reviews_on_{:foreign_key=>:true}_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,4 +72,7 @@ ActiveRecord::Schema.define(version: 20170228143102) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "comments", "users"
+  add_foreign_key "movies", "users"
+  add_foreign_key "reviews", "users"
 end
