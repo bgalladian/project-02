@@ -3,7 +3,10 @@
 <p>Release Date: <%= @movie.release_date %> <font color ="gold">|</font> Director: <%=@movie.director %> <font color ="gold">|</font> Writer: <%=@movie.written_by %> </p>
   <img src="<%= @movie.poster_url %>">
 <br>
-<h2> <%= link_to "Edit Movie Information", edit_movie_path(@movie)%> | <%= link_to "Delete Movie", movie_path, method: :delete, data: {confirm: "Are you sure you want to delete?"}%></h2>
+
+<% if @movie.user == current_user %>
+<h2> <%= link_to "Edit Movie Information", edit_movie_path(@movie)%> | <%= link_to "Delete Movie", movie_path(@movie), method: :delete, data: {confirm: "Are you sure you want to delete?"}%></h2>
+<% end %>
 
 
 <p> <%= @movie.summary %> </p>

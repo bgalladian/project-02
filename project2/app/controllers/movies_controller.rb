@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.create!(movie_params)
+    @movie = current_user.movies.create!(movie_params)
     redirect_to movies_path
   end
 
@@ -30,12 +30,14 @@ class MoviesController < ApplicationController
 
   def destroy
     @movie = Movie.find(params[:id])
+    if @movie.user == current_user
     @movie.destroy
+  end
     redirect_to movies_path
   end
 
   private
   def movie_params
-    params.require(:movie).permit(:title, :director, :summary, :written_by, :poster_url, :release_date)
+    params.require(:movie).permit(:title, :director, :summary, :written_by, :poster_url, :release_date).merge(user: current_user)
   end
 end

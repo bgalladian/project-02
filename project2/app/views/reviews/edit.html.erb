@@ -12,7 +12,3 @@
 <br>
   <%= f.submit "Update"%>
   <% end %>
-
-  <%= form_for [@movie, @review], url: "/movies/#{@movie.id}/reviews/#{@review.id}", method: :delete do |f| %>
-  <%= f.submit "Delete Review", class: "btn-delete"%>
-  <% end %>

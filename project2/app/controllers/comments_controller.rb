@@ -11,7 +11,7 @@ before_action :authenticate_user!, except: [:index, :show]
   def create
     @movie = Movie.find(params[:movie_id])
     @review = Review.find(params[:review_id])
-    @comment = @review.comments.create(comment_params)
+    @comment = @review.comments.create!(comment_params)
     redirect_to movie_review_path(@movie, @review)
   end
 
@@ -39,6 +39,6 @@ before_action :authenticate_user!, except: [:index, :show]
 
   private
   def comment_params
-    params.require(:comment).permit(:author, :comments)
+    params.require(:comment).permit(:author, :comments).merge(user: current_user)
   end
 end

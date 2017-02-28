@@ -2,12 +2,18 @@
 <h2>Critic: <%= @review.author %> <font color="gold">|</font> Posted: <%= @review.created_at.strftime("%b %d. %Y")%></h2>
 <h2>Rating: <%= @review.rating %></h2>
 <p><%= @review.content %></p>
+
+<% if @review.user == current_user %>
 <p><%= link_to "Edit Review", edit_movie_review_path %> | <%=link_to "Delete Review", movie_review_path(@movie, @review), method: :delete, data: {confirm: "Are you sure you want to delete?"}%></p>
+<% end %>
 <br>
 
 <h3>Comments<%=link_to "(+)", new_movie_review_comment_path(@movie, @review)%></h3>
 <% @review.comments.each do |comment| %>
-<P>"<%= comment.comments %>" <font color="gold"> | </font> Comment by: <%= comment.author %> <%=link_to "Edit", edit_movie_review_comment_path(@movie, comment)%></P>
+
+<P>"<%= comment.comments %>" <font color="gold"> | </font> Comment by: <%= comment.author %>
+
+  <% if comment.user == current_user %> <%=link_to "Edit", edit_movie_review_comment_path(@movie, comment)%>  <% end %>
 
 <% end %>
 </div>
