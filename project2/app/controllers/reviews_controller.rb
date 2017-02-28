@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
 before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @movie = Movie.find(params[:movie_id])
     @reviews = Review.all
