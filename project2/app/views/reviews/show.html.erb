@@ -1,6 +1,8 @@
-<div class = "review">
+<br>
 <h2>Critic: <%= @review.author %> <font color="gold">|</font> Posted: <%= @review.created_at.strftime("%B %d, %Y")%> <font color="gold">|</font> Updated: <%= @review.updated_at.strftime("%B %d, %Y")%></h2>
 <h2>Was It Worth It? "<%= @review.rating %>"</h3>
+  <div class = "review">
+    <br>
 <div class="review-content">
   <p><%= simple_format(@review.content )%></p>
 </div>
@@ -16,6 +18,10 @@
 <P>"<%= comment.comments %>" <font color="gold"> | </font> Comment by: <%= comment.author %> <font color="gold"> | </font> On: <%= comment.created_at.strftime("%b %d. %y")%>
 
   <% if comment.user == current_user %> <%=link_to "Edit", edit_movie_review_comment_path(@movie, @review, comment)%>  <% end %>
-
+<br>
 <% end %>
 </div>
+<br>
+<br>
+<br>
+<br>

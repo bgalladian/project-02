@@ -1,7 +1,7 @@
+
 <br>
-<br>
-<div class = "new-review">
 <div class="form">
+  <h1> New review for "<%= @movie.title %>"</h1>
 <%= form_for [@movie, @review]  do |f| %>
 
   <%= f.label :author %>
@@ -9,7 +9,7 @@
 <br>
 <br>
   <%= f.label :Was_it_worth_it?  %>
-  <%= f.select :rating, [["Waste  of my money!"], ["Thank goodness I didn't pay for it"],["Wouldn't pay for a friend"], ["Totally worth it!"]] %>
+  <%= f.select :rating, [["Totally worth it!"], ["Thank goodness I didn't pay for it"] , ["Wouldn't pay for a friend"] , ["Waste  of my time and money!"]] %>
 <br>
 <br>
   <%= f.label :review %>
@@ -18,5 +18,5 @@
 <br>
   <%= f.submit "Submit Review"%>
   <% end %>
-</div>
+
 </div>

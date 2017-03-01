@@ -1,8 +1,28 @@
 
+<% if @movies.blank? %>
+  <h4>There are no movies with the title  "<%= params[:search] %>".  You should add it!</h4>
+<% end %>
+
 <div class = "front-page">
+
+
+
+<h3>Welcome to <font color = "gold">"Was It Worth It?"</font>, where we ask if the movie was worth it or not!
+  We don't have traditional rating methods, so let me explain how we do things around here.
+  We have four ratings that should help users decide whether or not a movie is worth it:
+  <ul>
+    <li>"Totally Worth It!" means you should watch this movie ASAP.</li>
+    <li>"Wouldn't Pay For A Friend" means it's watchable, you just wouldn't pay for anyone else (like a date)</li>
+    <li>"Thank goodness I didn't pay for it!" means that it is barely watchable, and you wouldn't mind watching if someone else paid for you</li>
+    <li>"Waste of my time and money!" Means no one, by any means, should watch this movie...ever!
+  </ul>
+  So go ahead and start looking at reviews, posting your own, or even just commenting on others.  Once a movie is added, it will display on the front page.  Have fun!
+  </h3>
+<br>
+
 <% @movies.each do |movie| %>
 <h2><%= link_to image_tag(movie.poster_url), movie %></h2>
 <% end %>
-</div>
 
+</div>
 <h3> <a href = "/movies/new"> Add Movie for Review </a></h3>

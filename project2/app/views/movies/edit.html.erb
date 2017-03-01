@@ -1,5 +1,6 @@
 <br>
 <br>
+<div class = "form">
 <%= form_for @movie, url:"/movies/#{@movie.id}" do |f| %>
 
   <%= f.label :title %>
@@ -23,3 +24,4 @@
   <%= f.submit "Update"%>
 
 <% end %>
+</div>

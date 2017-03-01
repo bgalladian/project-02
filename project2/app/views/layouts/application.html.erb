@@ -10,6 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <nav>
       <%= link_to image_tag("WiWi.png", height: 40, width: 40), "/movies" %>Was It Worth it?
+      <div class = "search-bar">
+      <%= form_tag(movies_path, :method => "get") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Movies" %>
+        <%= submit_tag "Search", :name => nil %>
+        <% end %>
+
+      </div>
+
         <div class = "nav-user">
         <% if !current_user %>
           <%= link_to "Sign in", new_user_session_path %> |
@@ -19,11 +27,11 @@
           <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
           <% end %>
         </div>
-        <hr>
+
     </nav>
   </head>
-
-
+<body>
+  <!-- <p> <a href = "/movies/new"> Add Movie for Review </a></p> -->
 
 
 

@@ -1,5 +1,6 @@
 <br>
 <br>
+<div class = "form">
 <%= form_for @movie do |f| %>
 
   <%= f.label :title %>
@@ -21,5 +22,5 @@
   <%= f.text_area :summary, :cols => "75", :rows => "5"  %>
 <br>
   <%= f.submit "Add Movie" %>
-
+</div>
   <% end %>
