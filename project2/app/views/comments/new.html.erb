@@ -1,12 +1,13 @@
+<br>
+<br>
 <div class = "new-comment">
-<h2>New Comment</h2>
 <%= form_for [@movie, @review, @comment]  do |f| %>
 
   <%= f.label :author %>
   <%= f.text_field :author %>
 
   <%= f.label :comments %>
-  <%= f.text_area :comments, :cols => "30" %>
+  <%= f.text_area :comments, :cols => "75" %>
 <br>
 <br>
   <%= f.submit "Submit Comment"%>

@@ -14,6 +14,6 @@
 
 <h2>Critic Reviews<%=link_to "(+)", new_movie_review_path(@movie)%>:</h2>
 <% @movie.reviews.each do |review| %></p>
-<h3><%= link_to review.author, movie_review_path(@movie, review)%></h3>
+<h3><%= link_to review.author, movie_review_path(@movie, review), data: {confirm: "Review may contain spoilers.  Do you wish to continue?"}%></h3>
 <% end %>
 </div>

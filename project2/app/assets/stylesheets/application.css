@@ -20,11 +20,6 @@ nav {
   background-color: rgba(125,125,125,0.8);
 }
 
-.nav-user{
-  float: right;
-  font-size: 16px;
-}
-
 hr {
   border-color: gold;
 }
@@ -39,6 +34,39 @@ hr {
    margin: 0;
    padding: 0;
  }
+
+ a {
+   text-decoration: none;
+   position: relative;
+   color: gold;
+ }
+
+ a:hover{
+   color: white;
+
+ }
+
+ label{
+   margin-right: 10px;
+   display: block
+ }
+
+ form {
+   margin: auto;
+   display: block;
+   align-items: center;
+   text-align: center;
+   border-radius: 10%;
+   background-color: rgba(125,125,125,0.8);
+   width: 600px;
+ }
+
+.nav-user{
+  float: right;
+  font-size: 16px;
+  padding-top: 10px;
+  margin: 10px;
+}
 
 .front-page{
   display: inline-flex;
@@ -58,7 +86,6 @@ hr {
 }
 
 .front-page img {
-	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	transition: .3s ease-in-out;
 }
@@ -78,48 +105,15 @@ hr {
   text-align: left;
 }
 
-/*links*/
-a {
-  text-decoration: none;
-  position: relative;
-  color: gold;
-}
-
-a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  border-bottom: 3px solid gold;
-  transition: 1s;
-
-}
-
-a:hover:after {
-  width: 100%;
-}
-
-label{
-  margin-right: 10px;
-  display: block
-}
-
-form {
-  margin: auto;
-  display: block;
-  align-items: center;
-  text-align: center;
-  border-radius: 10%;
-  background-color: rgba(125,125,125,0.8);
-  width: 600px;
-}
-
 .edit-review, .new-comment, .new-review, .show-page, .front-page, .review {
   padding: 20px;
-
 }
 
 .review {
   background-color: rgba(125,125,125,0.8);
+}
+
+.review-content {
+  border: solid gold;
+  padding: 10px;
 }
