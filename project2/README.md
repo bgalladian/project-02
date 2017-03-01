@@ -1,24 +1,33 @@
-# README
+#WasItWorthIt.com
+Repository for my second project.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Description
+A movie review site where users can share their opinions on their favorite films. The site should perform the following actions at these levels:
 
-Things you may want to cover:
+MVP
+- Load the site
+- Display movies that have been reviewed
+- Display descriptions and poster of movie
+- Update descriptions and movie poster
+- Accept reviews by users
+- Update reviews by users  
+- Comment on reviews
+- Edit comments on reviews
 
-* Ruby version
+Silver
+- User authentication
 
-* System dependencies
+Gold
+- Being able to search for reviews
 
-* Configuration
+#Technology
+  This site uses Ruby on Rails to load the content on the site.  It also uses ActiveRecord and Postgres SQL.  CSS is used to style everything.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#User Stories
+As a user:
+  1. Should be load the site.
+  2. View reviews left by other users.
+  3. Post their own reviews.
+  4. Edit their reviews.
+  5. Leave comments on other users reviews.
+  6. Edit comments they made.

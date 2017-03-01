@@ -16,10 +16,9 @@ MVP
 
 Silver
 - User authentication
-- Upvote or downvote reviews
 
 Gold
-- Reorder site based on number of votes.
+- Being able to search for reviews
 
 #Technology
   This site uses Ruby on Rails to load the content on the site.  It also uses ActiveRecord and Postgres SQL.  CSS is used to style everything.
