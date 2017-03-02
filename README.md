@@ -18,14 +18,14 @@ Silver
 - User authentication
 
 Gold
-- Being able to search for reviews
+- Be able to search for reviews
 
 #Technology
   This site uses Ruby on Rails to load the content on the site.  It also uses ActiveRecord and Postgres SQL.  CSS is used to style everything.
 
 #User Stories
 As a user:
-  1. Should be load the site.
+  1. Should be able to load the site.
   2. View reviews left by other users.
   3. Post their own reviews.
   4. Edit their reviews.
