@@ -41,6 +41,7 @@ hr {
    text-decoration: none;
    position: relative;
    color: gold;
+   margin-left: 10px;
  }
 
  a:hover{
@@ -52,7 +53,9 @@ hr {
    display: block
  }
 
-
+ #wiwi {
+   color: gold;
+ }
 
  .form {
    margin: auto;
@@ -122,5 +125,36 @@ hr {
   display: inline-block;
   margin: 0 auto;
   padding-left: 20%;
+}
 
+/*links*/
+a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+a:before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 4px;
+  top: -16px;
+  right: -16px;
+  bottom: -16px;
+  left: -16px;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+a:hover:before, a:focus:before, a:active:before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  opacity: 1;
 }
