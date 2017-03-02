@@ -35,13 +35,14 @@ hr {
    margin: 0;
    padding: 0;
 
+
  }
 
  a {
    text-decoration: none;
    position: relative;
    color: gold;
-   margin-left: 10px;
+   margin: 10px;
  }
 
  a:hover{
@@ -124,7 +125,7 @@ hr {
 .search-bar {
   display: inline-block;
   margin: 0 auto;
-  padding-left: 20%;
+  padding-left: 15%;
 }
 
 /*links*/
