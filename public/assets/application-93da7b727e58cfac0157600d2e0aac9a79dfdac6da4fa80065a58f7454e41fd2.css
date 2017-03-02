@@ -1,0 +1,161 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+nav {
+  font-family: 'Fontdiner Swanky', cursive;
+  font-size: 24px;
+  overflow: hidden;
+  background-color: rgba(125,125,125,0.8);
+}
+
+hr {
+  border-color: gold;
+}
+
+
+ body{
+   font-family: 'Lato', sans-serif;
+   background-image: url("http://filmrise.com/wp-content/uploads/2014/03/interior.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-size: 12px;
+   color: white;
+   margin: 0;
+   padding: 0;
+
+ }
+
+ a {
+   text-decoration: none;
+   position: relative;
+   color: gold;
+   margin-left: 10px;
+ }
+
+ a:hover{
+   color: white;
+ }
+
+ label{
+   margin-right: 10px;
+   display: block
+ }
+
+ #wiwi {
+   color: gold;
+ }
+
+ .form {
+   margin: auto;
+   display: block;
+   align-items: center;
+   text-align: center;
+   border-radius: 10%;
+   background-color: rgba(125,125,125,0.8);
+   width: 700px;
+ }
+
+.nav-user{
+  float: right;
+  font-size: 16px;
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.front-page{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  padding: 5%;
+  text-align: left;
+}
+
+.front-page img{
+  height: 300px;
+  padding: 5px;
+}
+
+.front-page img {
+	filter: grayscale(100%);
+	transition: .3s ease-in-out;
+}
+
+.front-page :hover img {
+	filter: grayscale(0);
+}
+
+.show-page img{
+  height: 500px;
+
+  float: left;
+  padding-right: 10px;
+}
+
+.review {
+  text-align: left;
+}
+
+.show-page, .review {
+  padding-left: 20px;
+}
+
+.review {
+  background-color: rgba(125,125,125,0.8);
+}
+
+.review-content {
+  border: solid gold;
+  padding: 10px;
+}
+
+.search-bar {
+  display: inline-block;
+  margin: 0 auto;
+  padding-left: 20%;
+}
+
+/*links*/
+a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+a:before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 4px;
+  top: -16px;
+  right: -16px;
+  bottom: -16px;
+  left: -16px;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+a:hover:before, a:focus:before, a:active:before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  opacity: 1;
+}
