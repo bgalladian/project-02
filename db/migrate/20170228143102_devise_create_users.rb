@@ -1,4 +1,5 @@
 class DeviseCreateUsers < ActiveRecord::Migration[5.0]
+  # Good use of Devise
   def change
     create_table :users do |t|
       ## Database authenticatable

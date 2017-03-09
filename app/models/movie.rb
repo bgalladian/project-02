@@ -5,5 +5,5 @@ class Movie < ActiveRecord::Base
   def self.search(search)
   where("title ILIKE ?" , "%#{search}%")
   end
-
+  # Impressive implementation of class methods for search functionality
 end
