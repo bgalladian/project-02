@@ -32,6 +32,8 @@ before_action :authenticate_user!, except: [:index, :show]
     @review = Review.find(params[:id])
     @review.update(review_params)
     redirect_to movie_review_path(@movie)
+    # Same here, be more specific since this path helper is references a specific
+    # review of a specific movie (i.e. movie_review_path(@movie, @review))
   end
 
   def destroy

@@ -1,6 +1,7 @@
 <br>
 <br>
 <div class = "form">
+<%# If you wanted, you could create a partial form view that is rendered both here and in the edit view %>
 <%= form_for @movie, url:"/movies/#{@movie.id}" do |f| %>
 
   <%= f.label :title %>
