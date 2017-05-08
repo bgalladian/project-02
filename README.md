@@ -24,7 +24,7 @@ Gold
   This site uses Ruby on Rails to load the content on the site.  It also uses ActiveRecord and Postgres SQL.  CSS is used to style everything.
 
 #User Stories
-As a user:
+As a user (MVP):
   1. Should be able to load the site.
   2. View reviews left by other users.
   3. Post their own reviews.

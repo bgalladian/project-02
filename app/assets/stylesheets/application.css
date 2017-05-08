@@ -100,7 +100,6 @@ hr {
 
 .show-page img{
   height: 500px;
-
   float: left;
   padding-right: 10px;
 }
@@ -110,7 +109,7 @@ hr {
 }
 
 .show-page, .review {
-  padding-left: 20px;
+  padding: 20px;
 }
 
 .review {
@@ -158,4 +157,10 @@ a:hover:before, a:focus:before, a:active:before {
   bottom: -8px;
   left: -8px;
   opacity: 1;
+}
+
+.welcome {
+  padding: 10px;
+  border: solid gold;
+  background-color: rgba(125,125,125,0.8);
 }
